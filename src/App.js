@@ -1,17 +1,32 @@
-
-
-import Header from './Components/Header';
+import  {RouterProvider, createBrowserRouter} from 'react-router-dom';
+import Root from '../src/Components/Pages/Root';
 import List from './Components/List';
+import AboutRoot from './Components/Pages/AboutRoot';
+import Home from './Components/Home';
+import Movies from './Movies';
+import Form from './Form';
 
 
+let router = createBrowserRouter([{
+  path : '/' , element: <Root/>,  errorElement : <h1>Error Page</h1>, children :[
+    {path : '/', element : <List/>}, {path:'/about', element : <AboutRoot/>}, {
+      path : '/home', element: <Home/>
+    }
+  ]},
+
+  ])
 function App() {
+  function collectdata(x,y,z){
+
+  }
   
-  return (< >
-       <Header/>
-       <div style={{height:'40px', textAlign:'center', padding:'30px', backgroundColor:'grey'}}>The Generics</div>
-       <List />
+  // return (<RouterProvider router={router}/>
+  return <>
+  <Form collectdata={collectdata}/>
+  <Movies/>
   </>
-  );
+  
+  // );
 }
 
 

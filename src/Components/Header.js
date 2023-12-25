@@ -3,6 +3,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/esm/Button';
 import Example from './Cart/Offcanvas';
+import { NavLink } from 'react-router-dom';
+import classes from './Header.module.css'
 
 const Header = ()=>{
     console.log("header");
@@ -17,9 +19,9 @@ const Header = ()=>{
         </Col>
         <Col xs={4}>
             <Row>
-            <Col>HOME</Col>
-            <Col>STORE</Col>
-            <Col>ABOUT</Col>
+            <Col><NavLink to='/home'>HOME</NavLink></Col>
+            <Col><NavLink to ="/" >STORE</NavLink></Col>
+            <Col><NavLink to='/about' >ABOUT</NavLink></Col>
             </Row>
             
         </Col>
