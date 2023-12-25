@@ -1,4 +1,1 @@
-"wht am i donngg"
-"jjjj"
-
-"just started with git";
+"just now starrted on react";
