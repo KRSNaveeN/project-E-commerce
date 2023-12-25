@@ -1,2 +1,4 @@
 "wht am i donngg"
 "jjjj"
+
+"just started with git";
