@@ -33,7 +33,7 @@ useEffect(()=>{
 
     return <>
     <section style={{textAlign:"center"}}>
-        hello
+        {/* hello */}
     </section>
     <section>
         {loading && <h2>loading....</h2>}

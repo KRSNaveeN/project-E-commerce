@@ -1,0 +1,35 @@
+.backdrop{
+    margin: auto;
+    background-color: rgb(221, 228, 234);
+    border-radius: 20px;
+    max-width: 600px;
+
+}
+
+.form{
+    margin:0 20px;
+    padding: 10px 0;
+
+}
+input, textarea{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.butn{
+    text-align: center;
+}
+.btn{
+    margin: 10px auto;
+    background-color: rgb(66, 39, 164);
+    color: antiquewhite;
+    border-radius: 10px;
+    border: 1px solid  rgb(66, 39, 164);
+    
+    
+}
+
+label{
+    font-weight: bold;
+}
+
