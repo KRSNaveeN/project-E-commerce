@@ -6,6 +6,7 @@ const Movies = ()=>{
  const [movies, setMovies] = useState([]);
  const [loading, setLoading] = useState(false);
  const [error, setError] = useState(null);
+ 
 
  let moviesHandler =  useCallback (async () => {
     console.log("btn click")
@@ -56,7 +57,7 @@ useEffect(()=>{
         {loading && <h2 style={{textAlign:"center"}}>loading....</h2>}
         {!loading && error && <h2>{error}</h2>}
         {/* { error && <button onClick={removeHandler}>Cancel</button>} */}
-       {movies.length >0 && <MoviesList movies={movies}/>} 
+       {movies.length >0 && <MoviesList movies={movies} handler={moviesHandler}/>} 
     </section>
     </>;
 };
