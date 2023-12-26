@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useContext, useEffect, useState } from 'react';
 import Context from './Store/Context';
+import  {Link } from 'react-router-dom';
+import ProductDetail from './ProductDetail';
 
 let array = [{
 
@@ -63,7 +65,9 @@ let ctx = useContext(Context);
     <Container >
         <Row  >
         {Dummydata.map((item)=>{
+          let url = `/productdetail/${item.title}`;
         return <Col key={Math.random()} xs={{ span: 4, offset: 2}} style={{ marginBottom: '35px' }}>
+          <Link to={url}>
            <h5>{item.title}</h5>
            <div><img style={{width:'170px', marginBottom: '15px' }} src={item.imageUrl} alt=""/></div>
            <div>
@@ -73,8 +77,10 @@ let ctx = useContext(Context);
           
            </Row>
            </div>
-         
+           </Link>
         </Col>
+        
+        
       })}
         </Row>
      

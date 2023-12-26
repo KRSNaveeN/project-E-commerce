@@ -7,6 +7,7 @@ import Movies from './Movies';
 import Form from './Form';
 import { useState } from 'react';
 import Contact from './Components/Contact';
+import ProductDetail from './Components/ProductDetail';
 
 
 
@@ -17,6 +18,9 @@ let router = createBrowserRouter([{
     },
     {
       path :'/contact', element : <Contact/>
+    },
+    {
+      path :'/productdetail/:id', element : <ProductDetail/>
     }
   ]},
 

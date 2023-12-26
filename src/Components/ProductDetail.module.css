@@ -1,0 +1,48 @@
+.product{
+    display:flex;
+    background-color: rgb(139, 138, 135);
+    gap:30px;
+    padding :20px;
+}
+.btn{
+    display:flex;
+    justify-content: space-between;
+    margin: 5px;
+    /* gap :20px; */
+}
+.images{
+    display:flex;
+    width:50%;
+    justify-content: space-between;
+
+}
+.img1{
+    transform: rotateY(60deg);
+    width :50px;
+    /* rotate: 30deg; */
+    
+}
+.img2{
+    transform: rotateZ(90deg);
+    width :50px;
+    /* rotate: 30deg; */
+    
+}
+.img3{
+    transform: rotatez(90deg);
+    width :50px;
+    /* rotate: 30deg; */
+   
+}
+.img4{
+    transform: rotateY(60deg);
+    width :50px;
+    /* rotate: 30deg; */
+    
+}
+.img5{
+    transform: rotateY(60deg);
+    width :50px;
+    /* rotate: 30deg; */
+   
+}
