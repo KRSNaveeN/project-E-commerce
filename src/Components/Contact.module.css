@@ -1,0 +1,17 @@
+.backdrop{
+    width : 600px;
+    border-radius: 15px;
+    background-color: rgb(197, 182, 167);
+    margin:  10px auto;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(102, 94, 94, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button{
+    padding : 5px;
+    background-color: rgb(16, 163, 221);
+    border-radius: 10px;
+    border:  1px solid black ;
+    font: bold;
+    margin: 10px 45%;
+}

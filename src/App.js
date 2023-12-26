@@ -6,6 +6,7 @@ import Home from './Components/Home';
 import Movies from './Movies';
 import Form from './Form';
 import { useState } from 'react';
+import Contact from './Components/Contact';
 
 
 
@@ -13,6 +14,9 @@ let router = createBrowserRouter([{
   path : '/' , element: <Root/>,  errorElement : <h1>Error Page</h1>, children :[
     {path : '/', element : <List/>}, {path:'/about', element : <AboutRoot/>}, {
       path : '/home', element: <Home/>
+    },
+    {
+      path :'/contact', element : <Contact/>
     }
   ]},
 
@@ -30,10 +34,10 @@ function App() {
     let response = await fetch("https://rect-61d4c-default-rtdb.firebaseio.com/movies.json", {
       method : 'POST',
       body : JSON.stringify(obj),
-      // headers:{
-      //   'Content-Type':"Application/json",
-      //   // "Access-Control-Allow-Origin": "*",
-      // }
+      headers:{
+        'Content-Type':"Application/json",
+        // "Access-Control-Allow-Origin": "*",
+      }
      
     })
 
@@ -43,15 +47,15 @@ function App() {
   }
  
   
-  // return (<RouterProvider router={router}/>
-  return <div style={{backgroundColor:"black"}}>
+  return (<RouterProvider router={router}/>
+  // return <div style={{backgroundColor:"black"}}>
 
-  <Form collectdata={collectdata}/>
+  // <Form collectdata={collectdata}/>
   
-  <Movies />
-  </div>
+  // <Movies />
+  // </div>
   
-  // );
+  );
 }
 
 

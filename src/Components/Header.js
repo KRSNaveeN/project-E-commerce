@@ -22,6 +22,7 @@ const Header = ()=>{
             <Col><NavLink to='/home'>HOME</NavLink></Col>
             <Col><NavLink to ="/" >STORE</NavLink></Col>
             <Col><NavLink to='/about' >ABOUT</NavLink></Col>
+            <Col><NavLink to ='/contact'>CONTACT</NavLink></Col>
             </Row>
             
         </Col>
