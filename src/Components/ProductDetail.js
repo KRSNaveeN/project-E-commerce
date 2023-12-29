@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Dummydata from "./Cart/dummydata";
+import Dummydata from "./Authentication/pages/Cart/dummydata";
 import classes from './ProductDetail.module.css';
 import Button from "react-bootstrap/esm/Button";
 
@@ -11,7 +11,7 @@ const ProductDetail = ()=>{
 
     console.log(ans);
     return <>
-    <h1>Products</h1>
+    
     <section className={classes.product} >
     <div>
     <img src={ans[0].imageUrl} alt="" />

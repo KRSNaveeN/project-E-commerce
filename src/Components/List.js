@@ -1,5 +1,5 @@
 import React from 'react';
-import Dummydata from './Cart/dummydata';
+import Dummydata from './Authentication/pages/Cart/dummydata';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,7 +8,8 @@ import { useContext, useEffect, useState } from 'react';
 import Context from './Store/Context';
 import  {Link } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
-
+import Example from './Authentication/pages/Cart/Offcanvas';
+import classes from './List.module.css';
 let array = [{
 
     title: 'Colors',
@@ -62,14 +63,20 @@ function List() {
 let ctx = useContext(Context);
 
  return (
-    <Container >
+  <>
+  <div className ={classes.cart}>
+    <Example/>
+  </div>
+  <Container >
         <Row  >
         {Dummydata.map((item)=>{
-          let url = `/productdetail/${item.title}`;
+          let url = `/auth/store/productdetail/${item.title}`;
         return <Col key={Math.random()} xs={{ span: 4, offset: 2}} style={{ marginBottom: '35px' }}>
-          <Link to={url}>
+          
            <h5>{item.title}</h5>
-           <div><img style={{width:'170px', marginBottom: '15px' }} src={item.imageUrl} alt=""/></div>
+           <Link to={url}>
+           <div><img style={{width:'185px', marginBottom: '15px', borderRadius:'10px' }} src={item.imageUrl} alt=""/></div>
+            </Link>
            <div>
            <Row >
            <Col xs={3}>${item.price}</Col>
@@ -77,7 +84,7 @@ let ctx = useContext(Context);
           
            </Row>
            </div>
-           </Link>
+          
         </Col>
         
         
@@ -86,6 +93,8 @@ let ctx = useContext(Context);
      
      <Button style={{margin:'auto', display:'flex'}}>See the Cart</Button>
     </Container>
+  </>
+   
   );
 }
 

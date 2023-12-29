@@ -2,7 +2,7 @@
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { useContext, useEffect, useState } from "react";
-import Context from "../Store/Context";
+import Context from "../../../Store/Context";
 import Dummydata from './dummydata';
 
 

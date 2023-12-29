@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
-import Dummydata from '../Cart/dummydata';
+import Dummydata from '../Authentication/pages/Cart/dummydata';
 
      let Context = React.createContext({listitems:[], setlistItems:()=>{}, cartTotal : 0,  addtoCart : ()=>{},data: 0, setCarttotal : ()=>{}});
 
