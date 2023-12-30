@@ -15,6 +15,7 @@ import Layout from './Components/Authentication/components/Layout/Layout'
 
 import AuthContext from './Components/Authentication/store/AuthContext';
 import AuthPage from './Components/Authentication/pages/AuthPage';
+import StartingPageContent from './Components/Authentication/components/StartingPage/StartingPageContent';
 
 
 
@@ -29,14 +30,16 @@ function App() {
           <Routes>
               <Route path='/' element={<Layout/>}> 
         
-                  {!ctx.isLoggedIn && <Route path='/auth' element={ <AuthPage />}/>}
-                  
+                   {!ctx.isLoggedIn && <Route path='/auth' element={ <AuthPage />}/>}
+                   {!ctx.isLoggedIn &&<Route path='/auth/welcome' element ={<StartingPageContent/>}/>}
                    {ctx.isLoggedIn && <Route path='/auth' element = {<Root/>}>
                     <Route path='/auth' element={<List/>}/>
+                    <Route path='/auth/welcome' element ={<StartingPageContent/>}/>
                     <Route path='/auth/store/about' element={<AboutRoot/>}/>
                     <Route path="/auth/store/home"element={<Home/>}/>
                     <Route path='/auth/store/contact' element={<Contact/>}/>
                     <Route path='/auth/store/productdetail/:id' element ={<ProductDetail/>}/>
+
                   </Route>
                   } 
                   

@@ -9,7 +9,7 @@ const MainNavigation = () => {
   const isLoggedIn = ctx.isLoggedIn;
   return (
     <header className={classes.header}>
-      <Link to='/'><div className={classes.logo}>E-Commerce</div></Link>
+      <Link to='/auth/welcome'><div className={classes.logo}>E-Commerce</div></Link>
     {
       isLoggedIn &&   <div className={classes.gap}>
       <NavLink to='/auth/store/home'>HOME</NavLink>
