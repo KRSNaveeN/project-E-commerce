@@ -1,5 +1,41 @@
 .cart{
     position : absolute;
     right : 0;
+    top :0px;
+}
+.sec{
+    text-align: center;
+    height:39px;
+    padding-bottom: 20px;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    
+    font-family: 'Courier New', Courier, monospace;
 
+    background-color: burlywood;
+    
+    
+}
+.style{
+    background-color:  #6d5032;
+    color: aliceblue;
+    width:70vw;
+    text-align: center;
+    margin: 0px auto; border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(3, 2, 2, 0.2);
+}
+.col{
+    /* border: 1px dashed black; */border-bottom: 1px solid rgb(6, 5, 5);
+    
+}
+.foot{
+    display:flex;
+    justify-content: space-around;
+    background-color: rgb(58, 40, 16);
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    margin-top: 20px;
+    color: aliceblue;
 }

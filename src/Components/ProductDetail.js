@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Dummydata from "./Authentication/pages/Cart/dummydata";
+import Dummydata from "./Authentication/Cart/dummydata";
 import classes from './ProductDetail.module.css';
 import Button from "react-bootstrap/esm/Button";
 

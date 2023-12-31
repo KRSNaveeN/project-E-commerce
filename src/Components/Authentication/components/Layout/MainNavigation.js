@@ -7,9 +7,20 @@ import { NavLink } from 'react-router-dom';
 const MainNavigation = () => {
   let ctx = useContext(AuthContext);
   const isLoggedIn = ctx.isLoggedIn;
+  
+  let trimmedEmail="";
+  if(isLoggedIn)
+  {
+    let  x = localStorage.getItem("mail");
+     trimmedEmail = x.replace(/@gmail\.com$/, '');
+  }
+  let value = <div>
+    <div>Welcome</div>
+    <div>{trimmedEmail}</div>
+  </div>
   return (
     <header className={classes.header}>
-      <Link to='/auth/welcome'><div className={classes.logo}>E-Commerce</div></Link>
+      <Link to='/auth/welcome'><div className={classes.logo}>{ctx.isLoggedIn ? value : "E-Commerce"}</div></Link>
     {
       isLoggedIn &&   <div className={classes.gap}>
       <NavLink to='/auth/store/home'>HOME</NavLink>

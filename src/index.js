@@ -12,12 +12,13 @@ import '../node_modules/react-bootstrap/dist/react-bootstrap'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Auth>
-      <AuthContextProvider>
-    <App />
-    </AuthContextProvider>
+    <AuthContextProvider>
+      <Auth>
+      <App />
     </Auth>
+    </AuthContextProvider>
   </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

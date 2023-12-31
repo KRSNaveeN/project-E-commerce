@@ -1,5 +1,5 @@
-import Movies from './Movies';
-import Form from './Form';
+import Movies from './FetchMovies/Movies';
+import Form from './FetchMovies/Form';
 
 
 import Root from '../src/Components/Pages/Root';

@@ -68,8 +68,19 @@ const passwordref = useRef();
           
          
         }}).then((data)=>{
-          // localStorage.setItem(data.LocalId, data.idToken)
-          ctx.login(data.idToken);
+          
+          fetch("https://contactdetails-96801-default-rtdb.firebaseio.com/mails.json",{
+            method:'POST',
+            body : JSON.stringify({
+              email : enteredemail,
+              password: enteredpassword
+            }),     
+            "Content-Type":'applcation/json'
+          });
+
+         
+          ctx.login(data.idToken,data.localId,data.email);
+          console.log(data.localId);
           console.log(data)}).catch((err)=>{alert(err);console.log(err)})
         
         emailref.current.value = "";
